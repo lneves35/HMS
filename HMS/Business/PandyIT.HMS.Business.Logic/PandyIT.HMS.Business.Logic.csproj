@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{88451CA0-F9B2-4860-9A6D-6CB0A61AE6E6}</ProjectGuid>
+    <ProjectGuid>{C608B8C1-6F10-4884-A938-416904953E81}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PandyIT.HMS.Data.Entities</RootNamespace>
-    <AssemblyName>PandyIT.HMS.Data.Entities</AssemblyName>
+    <RootNamespace>PandyIT.HMS.Business.Logic</RootNamespace>
+    <AssemblyName>PandyIT.HMS.Business.Logic</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PandyIT.HMS.Data.Entities
+namespace PandyIT.HMS.Business.Logic
 {
     public class Class1
     {
