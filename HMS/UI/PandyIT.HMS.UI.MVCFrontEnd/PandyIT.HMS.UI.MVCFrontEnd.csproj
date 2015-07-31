@@ -39,6 +39,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -130,10 +136,23 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\PandyIT.Core\PandyIT.Core.csproj">
+      <Project>{8a75d052-d912-48ce-abbd-24a752d0cbdd}</Project>
+      <Name>PandyIT.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Business\PandyIT.HMS.Business.Logic\PandyIT.HMS.Business.Logic.csproj">
+      <Project>{c608b8c1-6f10-4884-a938-416904953e81}</Project>
+      <Name>PandyIT.HMS.Business.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data\PandyIT.HMS.Data.Entities\PandyIT.HMS.Data.Entities.csproj">
+      <Project>{88451CA0-F9B2-4860-9A6D-6CB0A61AE6E6}</Project>
+      <Name>PandyIT.HMS.Data.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

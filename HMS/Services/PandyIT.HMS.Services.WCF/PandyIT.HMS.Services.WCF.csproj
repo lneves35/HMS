@@ -80,6 +80,16 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\PandyIT.Core\PandyIT.Core.csproj">
+      <Project>{8a75d052-d912-48ce-abbd-24a752d0cbdd}</Project>
+      <Name>PandyIT.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Business\PandyIT.HMS.Business.Logic\PandyIT.HMS.Business.Logic.csproj">
+      <Project>{c608b8c1-6f10-4884-a938-416904953e81}</Project>
+      <Name>PandyIT.HMS.Business.Logic</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
