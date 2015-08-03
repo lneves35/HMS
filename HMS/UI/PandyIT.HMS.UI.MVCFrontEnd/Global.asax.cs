@@ -24,13 +24,6 @@ namespace PandyIT.HMS.UI.MVCFrontEnd
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-
-
-            //Setup DatabaseAccess
-            string connectionString = ConfigurationManager.ConnectionStrings["HmsDatabase"].ConnectionString;
-            var dbContext = new HmsContext(connectionString, new DropCreateDatabaseAlways<HmsContext>());
-            var unitOfWork = new UnitOfWork(dbContext);
-            unitOfWork.GetRepository<User>().Create(new User(){ FirstName = "Luis"});
         }
     }
 }
