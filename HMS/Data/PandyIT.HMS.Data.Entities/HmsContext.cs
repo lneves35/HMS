@@ -11,7 +11,7 @@ namespace PandyIT.HMS.Data.Model
             Database.SetInitializer(initializer);       
         }
 
-        protected HmsContext(string connectionString)
+        public HmsContext(string connectionString)
             : base(connectionString)
         {
             

@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
-using System.Web;
 using PandyIT.HMS.Data.Model;
 using PandyIT.HMS.Data.Model.Entities;
 
-namespace PandyIT.HMS.UI.MVCFrontEnd.App_Start.DatabaseInitializers
+namespace PandyIT.HMS.UI.MVCFrontEnd.DatabaseInitializers
 {
     public class DropCreateHmsDbAlways : DropCreateDatabaseAlways<HmsContext>
     {
@@ -21,6 +18,16 @@ namespace PandyIT.HMS.UI.MVCFrontEnd.App_Start.DatabaseInitializers
             context.UserTypes.Add(userAdmin);
             context.UserTypes.Add(userTypeEmployee);
             context.UserTypes.Add(userTypeCustomer);
+
+            var user1 = new User()
+            {
+                FirstName = "Luis",
+                LastName = "Neves",
+                UserType = userAdmin,
+                BirthDate = new DateTime(1979, 7, 9)
+            };
+            context.Users.Add(user1);
+
         }
     }
 }

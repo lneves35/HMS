@@ -17,6 +17,12 @@ namespace PandyIT.HMS.UI.MVCFrontEnd.Controllers
         public ActionResult Details(int userId)
         {
             var user = UserService.GetUserById(userId);
+            
+            if (user == null)
+            {
+                return this.HttpNotFound();
+            }
+
             return View(user);
         }
 

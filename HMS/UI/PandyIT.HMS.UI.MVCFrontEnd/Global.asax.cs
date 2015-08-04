@@ -1,6 +1,8 @@
 ﻿using System.Web.Http;
 using System.Web.Mvc;
+using System.Web.Optimization;
 using System.Web.Routing;
+using PandyIT.HMS.UI.MVCFrontEnd.App_Start;
 
 namespace PandyIT.HMS.UI.MVCFrontEnd
 {
@@ -15,6 +17,7 @@ namespace PandyIT.HMS.UI.MVCFrontEnd
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
             UnityConfig.RegisterComponents();
         }
     }

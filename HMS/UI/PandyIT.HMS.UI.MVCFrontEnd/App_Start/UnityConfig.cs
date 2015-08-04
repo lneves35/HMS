@@ -9,7 +9,7 @@ using PandyIT.Core.Validation.RecordCase.Core.Validation;
 using PandyIT.HMS.Business.Logic;
 using PandyIT.HMS.Business.Logic.Services;
 using PandyIT.HMS.Data.Model;
-using PandyIT.HMS.UI.MVCFrontEnd.App_Start.DatabaseInitializers;
+using PandyIT.HMS.UI.MVCFrontEnd.DatabaseInitializers;
 using Unity.Mvc5;
 
 namespace PandyIT.HMS.UI.MVCFrontEnd
@@ -21,12 +21,12 @@ namespace PandyIT.HMS.UI.MVCFrontEnd
 			var container = new UnityContainer();
 
             string connectionString = ConfigurationManager.ConnectionStrings["HmsDatabase"].ConnectionString;
-            var dbContext = new HmsContext(connectionString, new DropCreateHmsDbAlways());
-
-            container.RegisterType<IUnitOfWork, UnitOfWork>(new HierarchicalLifetimeManager(), new InjectionConstructor(dbContext));
+            //var dbContext = new HmsContext(connectionString, new DropCreateHmsDbAlways());
+            container.RegisterType<DbContext, HmsContext>(new PerThreadLifetimeManager(), new InjectionConstructor(connectionString, new DropCreateHmsDbAlways()));
+            container.RegisterType<IUnitOfWork, UnitOfWork>(new PerThreadLifetimeManager());
             container.RegisterType<IValidationRulesEngine, ValidationRulesEngine>();
-            container.RegisterType<IBusinessContext, BusinessContext>();
-            container.RegisterType<IUserService, UserService>();
+            container.RegisterType<IBusinessContext, BusinessContext>(new PerThreadLifetimeManager());
+            container.RegisterType<IUserService, UserService>(new PerThreadLifetimeManager());
             
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }
