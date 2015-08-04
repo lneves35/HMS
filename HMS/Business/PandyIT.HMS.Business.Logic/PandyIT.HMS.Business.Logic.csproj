@@ -50,6 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessContext.cs" />
+    <Compile Include="Services\IUserService.cs" />
+    <Compile Include="Services\UserService.cs" />
+    <Compile Include="IBusinessContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -57,9 +60,9 @@
       <Project>{8A75D052-D912-48CE-ABBD-24A752D0CBDD}</Project>
       <Name>PandyIT.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Data\PandyIT.HMS.Data.Entities\PandyIT.HMS.Data.Entities.csproj">
+    <ProjectReference Include="..\..\Data\PandyIT.HMS.Data.Entities\PandyIT.HMS.Data.Model.csproj">
       <Project>{88451CA0-F9B2-4860-9A6D-6CB0A61AE6E6}</Project>
-      <Name>PandyIT.HMS.Data.Entities</Name>
+      <Name>PandyIT.HMS.Data.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

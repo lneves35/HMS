@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Data.Entity;
 
 namespace PandyIT.Core.Database.Interfaces
 {
-    public interface IUnitOfWork : IDisposable
+    public interface IUnitOfWork
     {
-        //DbContext Context { get; }
-
         IRepository<TEntity> GetRepository<TEntity>() where TEntity : class;
     }
 }

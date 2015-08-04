@@ -1,4 +1,4 @@
-﻿namespace PandyIT.HMS.Data.Entities.Entities
+﻿namespace PandyIT.HMS.Data.Model.Entities
 {
     public class UserType
     {

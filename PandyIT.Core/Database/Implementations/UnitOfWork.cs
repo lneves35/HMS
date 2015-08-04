@@ -34,22 +34,5 @@ namespace PandyIT.Core.Database.Implementations
 
             return repo;
         }
-
-        public void Dispose()
-        {
-            Dispose(true);
-            GC.SuppressFinalize(this);
-        }
-
-        private void Dispose(bool disposing)
-        {
-            if (disposed || !disposing)
-                return;
-
-            if (DbContext != null)
-                DbContext.Dispose();
-
-            disposed = true;
-        }
     }
 }

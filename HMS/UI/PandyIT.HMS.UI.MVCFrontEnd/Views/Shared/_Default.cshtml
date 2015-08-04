@@ -5,9 +5,20 @@
     <title>@ViewBag.Title</title>
 </head>
 <body>
-    <div>
-        <h1>@ViewBag.Title</h1>
-        <div>@RenderBody()</div>
-    </div>
+<div>
+    <ul>
+        <li>
+            @Html.ActionLink("Users", "Index", "User")
+            <ul>
+                <li>@Html.ActionLink("Add", "Add", "User")</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div>
+    <h1>@ViewBag.Title</h1>
+    <div>@RenderBody()</div>
+</div>
 </body>
 </html>

@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using PandyIT.HMS.Data.Entities.Entities;
+﻿using System.Data.Entity;
+using PandyIT.HMS.Data.Model.Entities;
 
-namespace PandyIT.HMS.Data.Entities
+namespace PandyIT.HMS.Data.Model
 {
     public class HmsContext: DbContext
     {
