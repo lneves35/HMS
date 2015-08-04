@@ -2,7 +2,6 @@
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-using PandyIT.HMS.UI.MVCFrontEnd.App_Start;
 
 namespace PandyIT.HMS.UI.MVCFrontEnd
 {
