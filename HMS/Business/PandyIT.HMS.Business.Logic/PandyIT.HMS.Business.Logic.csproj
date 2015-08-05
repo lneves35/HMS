@@ -50,6 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessContext.cs" />
+    <Compile Include="Services\BaseService.cs" />
+    <Compile Include="Services\GenericDataService.cs" />
+    <Compile Include="Services\IGenericDataService.cs" />
     <Compile Include="Services\IUserService.cs" />
     <Compile Include="Services\UserService.cs" />
     <Compile Include="IBusinessContext.cs" />
