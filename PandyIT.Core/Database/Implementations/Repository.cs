@@ -5,6 +5,7 @@ using System.Data.Entity.Core.Metadata.Edm;
 using System.Linq;
 using System.Linq.Expressions;
 using LinqKit;
+using PandyIT.Core.Collections.Extensions;
 using PandyIT.Core.Database.Interfaces;
 
 namespace PandyIT.Core.Database.Implementations
@@ -30,9 +31,26 @@ namespace PandyIT.Core.Database.Implementations
 
         public IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate)
         {
-            predicate = predicate ?? PredicateBuilder.True<TEntity>();
+            if (predicate == null)
+            {
+                throw new ArgumentNullException("predicate");
+            }
+
             return EntitySet.AsExpandable().Where(predicate);
         }
+
+
+        public IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate, Func<IQueryable<TEntity>, IQueryable<TEntity>> include)
+        {
+            if (predicate == null)
+            {
+                throw new ArgumentNullException("predicate");
+            }
+
+            return EntitySet.IncludeAssociations(include).AsExpandable().Where(predicate);
+        }
+
+
 
         public TEntity Update(TEntity entity)
         {

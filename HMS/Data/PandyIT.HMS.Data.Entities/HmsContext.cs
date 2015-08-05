@@ -1,4 +1,6 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Data.Entity;
+using System.Diagnostics;
 using PandyIT.HMS.Data.Model.Entities;
 
 namespace PandyIT.HMS.Data.Model
@@ -8,7 +10,7 @@ namespace PandyIT.HMS.Data.Model
         public HmsContext(string connectionString, IDatabaseInitializer<HmsContext> initializer)
             : base(connectionString)
         {
-            Database.SetInitializer(initializer);       
+            Database.SetInitializer(initializer);
         }
 
         public HmsContext(string connectionString)

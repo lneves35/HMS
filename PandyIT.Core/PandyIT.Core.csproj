@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Collections\Extensions\EnumerableExtensions.cs" />
+    <Compile Include="Collections\Extensions\QueryableExtensions.cs" />
     <Compile Include="Database\Implementations\Repository.cs" />
     <Compile Include="Database\Implementations\UnitOfWork.cs" />
     <Compile Include="Database\Interfaces\IRepository.cs" />
